@@ -38,13 +38,13 @@ class TaskStore {
   };
 
   addSubtask = (task: ITask) => {
-    const newSubtask: ITask = { id: Date.now(), text: "Новая подзадача", completed: false, subtasks: [] };
+    const newSubtask: ITask = { id: Date.now(), text: "new subtask", completed: false, subtasks: [] };
     task.subtasks.push(newSubtask);
     this.saveTasks();
   };
 
   addTask = (parentTask?: ITask) => {
-    const newTask: ITask = { id: Date.now(), text: "Новая задача", completed: false, subtasks: [] };
+    const newTask: ITask = { id: Date.now(), text: "new task", completed: false, subtasks: [] };
     if (parentTask) {
       parentTask.subtasks.push(newTask);
     } else {
