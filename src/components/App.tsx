@@ -30,7 +30,7 @@ const TaskItem: React.FC<{ task: ITask; parentTask?: ITask }> = observer(({ task
             className="border px-2 py-1 rounded"
           />
         ) : (
-          <span onDoubleClick={() => setIsEditing(true)}>{task.text}</span>
+          <span onClick={() => setIsEditing(true)}>{task.text}</span>
         )}
         <button onClick={() => store.addSubtask(task)} className="ml-2 text-blue-500">+</button>
         <button onClick={() => store.addTask(task)} className="ml-2 text-green-500">➕</button>
