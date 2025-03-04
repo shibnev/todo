@@ -1,7 +1,6 @@
-export interface ITodoItem  {
+export interface ITask {
+  id: number;
   text: string;
   completed: boolean;
-  id: string | null;
-  items: ITodoItem[];
+  subtasks: ITask[];
 }
-
